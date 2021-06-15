@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <title>Login Form</title>
+    <link rel="Stylesheet" type="text/css" href="login.css">
+    <body>
+
+      <div class="Home-affairs">
+        <h1>Dpartment of Home Affairs</h1>
+        
+      </div>
+         <!----Log in form----------------->
+
+        <div class="login-box">
+          <img src="noun_user login_178831 (1).png">
+          <h1>Log In</h1>
+         
+          
+          <div class="text-box">
+            <img src="icons8-user-50.png">
+            <input type="text" placeholder="ID number" id="idNumber" name="ID_number" value="">
+        
+          </div>
+          <div class="text-box">
+            <img src="icons8-key-24.png">
+            <input type="password" placeholder="Password" id="password" name="password" value="">
+        
+          </div>
+          <input class="btn" type="button" name="btn-submit " value="Sign In">
+        
+        </div>
+        
+        </div>
+<script type="text/javascript" src="login.js"></script>
+    </body>
+</html>
+
+<script>
+const form = document.getElementById('login-box');
+const idNumber = document.getElementById('ID_number');
+const password = document.getElementById('password');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const idNumber = idNumber.value.trim();
+  const passwordValue = password.value.trim();
+
+  if (idNumber.length===13) {
+    email.parentElement.className = 'form-control success';
+  } else {
+    email.parentElement.className = 'form-control fail';
+  }
+
+  if (passwordValue.length >= 6) {
+    password.parentElement.className = 'form-control success';
+  } else {
+    password.parentElement.className = 'form-control fail';
+  }
+});
+
+
+</script>
